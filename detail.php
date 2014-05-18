@@ -80,14 +80,17 @@ header('X-UA-Compatible: IE=edge,chrome=1');
 
             <p class="back">
                 <?php
+                    $lang_imgmanager = ($lang['btn_mediaManager']) ? $lang['btn_mediaManager'] : $lang['img_manager'];
+                    $lang_back = ($lang['btn_img_backto']) ? sprintf($lang['btn_img_backto'], '') : $lang['img_backto'];
+
                     $imgNS = getNS($IMG);
                     $authNS = auth_quickaclcheck("$imgNS:*");
                     if (($authNS >= AUTH_UPLOAD) && function_exists('media_managerURL')) {
                         $mmURL = media_managerURL(array('ns' => $imgNS, 'image' => $IMG));
-                        echo '<a href="'.$mmURL.'">'.$lang['img_manager'].'</a><br />';
+                        echo '<a href="'.$mmURL.'">'.$lang_imgmanager.'</a><br />';
                     }
                 ?>
-                &larr; <?php echo $lang['img_backto']?> <?php tpl_pagelink($ID)?>
+                &larr; <?php echo $lang_back ?> <?php tpl_pagelink($ID) ?>
             </p>
 
         <?php } ?>
