@@ -10,12 +10,14 @@ body {
 #dokuwiki__site {
     margin: 0 auto;
     max-width: __site_width__;
-    padding: 1.4em 1em;
+    padding: 1.4em 0 0;
 }
 #dokuwiki__site > .site {
 }
 
 #dokuwiki__header {
+    padding-left: 1em;
+    padding-right: 1em;
 }
 #dokuwiki__header > .pad {
 }
