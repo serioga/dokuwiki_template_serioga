@@ -118,3 +118,45 @@ if (!function_exists('tpl_classes')) {
         return join(' ', $classes);
     }
 }
+
+function tpl_pageinfo_serioga($ret = false) {
+    global $conf;
+    global $lang;
+    global $INFO;
+    global $ID;
+
+    // return if we are not allowed to view the page
+    if(!auth_quickaclcheck($ID)) {
+        return false;
+    }
+
+    // prepare date and path
+    $fn = $INFO['filepath'];
+    if(!$conf['fullpath']) {
+        if($INFO['rev']) {
+            $fn = str_replace(fullpath($conf['olddir']).'/', '', $fn);
+        } else {
+            $fn = str_replace(fullpath($conf['datadir']).'/', '', $fn);
+        }
+    }
+    $fn   = utf8_decodeFN($fn);
+    $date = dformat($INFO['lastmod']);
+
+    // print it
+    if($INFO['exists']) {
+        $out = '';
+        $out .= '<bdi>'.$fn.'</bdi>';
+        $out .= ' · ';
+        $out .= $lang['lastmod'];
+        $out .= ' ';
+        $out .= $date;
+        if($ret) {
+            return $out;
+        } else {
+            echo $out;
+            return true;
+        }
+    }
+    return false;
+}
+
