@@ -43,10 +43,11 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
         <div id="dokuwiki__header"><div class="pad">
 
             <div class="headings">
-                <h1><?php tpl_link(wl(),$conf['title'],'accesskey="h" title="[H]"') ?></h1>
+                <h1><?php /*tpl_link(wl(),$conf['title'],'accesskey="h" title="[H]"')*/ ?></h1>
                 <?php /* how to insert logo instead (if no CSS image replacement technique is used):
                         upload your logo into the data/media folder (root of the media manager) and replace 'logo.png' accordingly:
                         tpl_link(wl(),'<img src="'.ml('logo.png').'" alt="'.$conf['title'].'" />','id="dokuwiki__top" accesskey="h" title="[H]"') */ ?>
+                <?php tpl_link(wl(),'<img src="'.ml('logo.png').'" alt="'.$conf['title'].'" />','id="dokuwiki__top" accesskey="h" title="[H]"') ?>
                 <?php if ($conf['tagline']): ?>
                     <p class="claim"><?php echo $conf['tagline'] ?></p>
                 <?php endif ?>
