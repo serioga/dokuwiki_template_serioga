@@ -88,6 +88,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
                 <div id="dokuwiki__sitetools">
                     <h3 class="a11y"><?php echo $lang['site_tools'] ?></h3>
                     <?php tpl_searchform() ?>
+                    <?php if ($conf['useacl'] && $showTools): ?>
                     <ul>
                         <?php _tpl_toolsevent('sitetools', array(
                             'recent'    => tpl_action('recent', 1, 'li', 1),
@@ -95,6 +96,7 @@ $showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
                             'index'     => tpl_action('index', 1, 'li', 1),
                         )); ?>
                     </ul>
+                    <?php endif ?>
                 </div>
 
             </div>
