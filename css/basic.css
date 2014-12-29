@@ -21,12 +21,12 @@ body {
 }
 body {
     /*font: normal 100%/1.4 "Roboto", sans-serif;*/
-    font: normal 125%/1.4 Frutiger, Calibri, "Myriad Pro", Myriad, "Nimbus Sans L", Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: normal 100%/1.4 Frutiger, Calibri, "Myriad Pro", Myriad, "Nimbus Sans L", Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* default font size: 100% => 16px; 93.75% => 15px; 87.5% => 14px; 81.25% => 13px; 75% => 12px */
     -webkit-text-size-adjust: 100%;
 }
 #config__manager {
-    font-size: 70%;
+    font-size: 68.75%;
 }
 /*____________ headers ____________*/
 

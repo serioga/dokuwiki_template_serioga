@@ -228,6 +228,7 @@
 
 .dokuwiki .page {
     word-wrap: break-word;
+    font-size: 118.75%;
 }
 
 /* license note in footer and under edit window */
@@ -251,7 +252,7 @@ html, body {
 }
 
 #dw__toc {
-    font-size: 75%;
+    font-size: 80%;
 }
 
 /* footer
@@ -263,7 +264,6 @@ html, body {
 
 #dokuwiki__footer {
     padding: 0.5em 1em 2.8em;
-    font-size: 75%;
 }
 #IE7 #dokuwiki__footer {
     height: 1%;
