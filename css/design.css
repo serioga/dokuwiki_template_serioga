@@ -62,6 +62,7 @@
 
 #dokuwiki__header div.breadcrumbs {
     margin-bottom: .3em;
+    font-size: 68.75%;
 }
 #dokuwiki__header div.breadcrumbs a {
     color: __existing__;
