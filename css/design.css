@@ -12,6 +12,7 @@
 
 #dokuwiki__header {
     margin: 1em 0 0;
+    color: __site_background_text__;
 }
 #IE7 #dokuwiki__header {
     margin-top: 2em;
@@ -26,7 +27,7 @@
 }
 #dokuwiki__header h1 a {
     text-decoration: none;
-    color: #00c;
+    color: __site_background_link__;
     background-color: inherit;
 }
 #dokuwiki__header p.claim {
@@ -65,7 +66,7 @@
     font-size: 68.75%;
 }
 #dokuwiki__header div.breadcrumbs a {
-    color: __existing__;
+    color: __site_background_link__;
     background-color: inherit;
 }
 
@@ -128,6 +129,16 @@
 [dir=rtl] #dokuwiki__usertools ul li.user {
     float: right;
     margin-right: 0;
+}
+
+/*____________ site tools ____________*/
+
+#dokuwiki__sitetools a {
+    color: __site_background_text__;
+    font-size: 81.25%;
+}
+#dokuwiki__sitetools a {
+    color: __site_background_link__;
 }
 
 /*____________ page tools ____________*/
@@ -249,7 +260,13 @@ html, body {
 }
 
 #dokuwiki__site {
-    background-color: #DDD;
+    background: __site_background_top__;
+    background: -moz-linear-gradient(top,  __site_background_top__ 0%, __site_background_bottom__ __site_background_height__);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,__site_background_top__), color-stop(__site_background_height__,__site_background_bottom__));
+    background: -webkit-linear-gradient(top,  __site_background_top__ 0%,__site_background_bottom__ __site_background_height__);
+    background: -o-linear-gradient(top,  __site_background_top__ 0%,__site_background_bottom__ __site_background_height__);
+    background: -ms-linear-gradient(top,  __site_background_top__ 0%,__site_background_bottom__ __site_background_height__);
+    background: linear-gradient(to bottom,  __site_background_top__ 0%,__site_background_bottom__ __site_background_height__);
 }
 
 #dw__toc {
@@ -265,6 +282,7 @@ html, body {
 
 #dokuwiki__footer {
     padding: 0.5em 1em 2.8em;
+    color: __site_background_text__;
 }
 #IE7 #dokuwiki__footer {
     height: 1%;
