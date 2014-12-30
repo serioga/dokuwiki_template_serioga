@@ -254,6 +254,13 @@
     /*border-bottom: 3px #AAA solid;*/
 }
 
+.dokuwiki div.section_highlight {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    background-color: #ffffbb;
+}
+
 html, body {
     background-color: #EEE;
 }
