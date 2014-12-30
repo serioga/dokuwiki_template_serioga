@@ -38,7 +38,7 @@ h5,
 h6 {
     /*font-family: Constantia, Utopia, Lucidabright, Lucida, Georgia, "Nimbus Roman No9 L", serif;*/
     font-weight: bold;
-    /*color: __text_neu__;*/
+    color: __text_neu__;
     background-color: inherit;
     padding: 0;
     line-height: 1.2;
