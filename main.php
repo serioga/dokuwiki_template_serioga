@@ -12,7 +12,7 @@ if (!defined('DOKU_INC')) die(); /* must be run from within DokuWiki */
 header('X-UA-Compatible: IE=edge,chrome=1');
 
 $showTools = !tpl_getConf('hideTools') || ( tpl_getConf('hideTools') && !empty($_SERVER['REMOTE_USER']) );
-$showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show');
+$showSidebar = page_findnearest($conf['sidebar']) && ($ACT=='show') && $ID != "start";
 ?><!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $conf['lang'] ?>"
   lang="<?php echo $conf['lang'] ?>" dir="<?php echo $lang['direction'] ?>" class="no-js">
