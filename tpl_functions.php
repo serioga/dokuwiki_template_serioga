@@ -150,6 +150,8 @@ function tpl_pageinfo_serioga($ret = false) {
         $out .= $lang['lastmod'];
         $out .= ' ';
         $out .= $date;
+        $out .= ' · ';
+        $out .= tpl_action('revisions', 1, '', 1);
         if($ret) {
             return $out;
         } else {
